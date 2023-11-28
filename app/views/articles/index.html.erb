@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light border-bottom">
+  <div class="container-fluid justify-content-between">
+    <a href=<%= articles_path %> class="text-secondary text-decoration-none fs-5">Wikinimous</a>
+    <a href=<%= new_article_path %> class="text-black text-decoration-none">New article</a>
+  </div>
+</nav>
+<div class="container">
+  <ul class="list-group list-group-flush mt-4">
+    <% @articles.each do |article| %>
+      <li class="list-group-item"><%= link_to article.title, article_path(article) %>
+    <% end %>
+  </ul>
+</div>
